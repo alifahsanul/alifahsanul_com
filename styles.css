@@ -7,23 +7,23 @@ body {
 }
 
 .container {
-    padding: 100px 20px;
+    padding: 60px 20px 40px; /* top, side, bottom */
 }
 
 h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-a {
+a.btn {
     display: inline-block;
-    margin: 10px;
-    padding: 12px 24px;
+    margin: 8px;
+    padding: 10px 20px;
     background-color: #0070f3;
     color: white;
     text-decoration: none;
@@ -31,6 +31,35 @@ a {
     transition: background-color 0.3s ease;
 }
 
-a:hover {
+a.btn:hover {
     background-color: #0059c1;
+}
+
+.projects-container {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.projects-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item h3 a {
+    color: #0070f3;
+    text-decoration: none;
+}
+
+.project-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: #555;
 }
