@@ -90,13 +90,9 @@ body {
     font-style: italic;
 }
 
-/* Event Details */
-.event-details {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 30px 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+/* Event Details within column */
+.event-details-column .detail-item {
+    margin-bottom: 20px;
 }
 
 .detail-item {
@@ -138,24 +134,67 @@ body {
     margin-top: 5px;
 }
 
-/* RSVP Section */
-.rsvp-section {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 40px 30px;
-    margin: 30px 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #D2691E;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 2px solid #D2691E;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.rsvp-section h2 {
+.map-link:hover {
+    background-color: #D2691E;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.map-link i {
+    margin-right: 5px;
+}
+
+/* Main content layout */
+.invitation-content {
+    margin: 30px 0;
+}
+
+/* Unified Main Details Section */
+.main-details-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 30px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* RSVP Column */
+.rsvp-column {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Event Details Column */
+.event-details-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.rsvp-column h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: #8B4513;
     margin-bottom: 15px;
 }
 
-.rsvp-section p {
+.rsvp-column p {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 25px;
@@ -183,7 +222,7 @@ body {
     margin-right: 10px;
 }
 
-.rsvp-note {
+.rsvp-column .rsvp-note {
     margin-top: 20px;
     font-style: italic;
     color: #777;
@@ -279,6 +318,11 @@ body {
     
     .couple-names {
         gap: 15px;
+    }
+    
+    .main-details-section {
+        flex-direction: column;
+        gap: 20px;
     }
     
     .detail-item {
