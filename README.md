@@ -1,33 +1,74 @@
 # Alif Ahsanul - Personal Portfolio
 
-Welcome to my personal portfolio website! Here you can find my featured projects, connect with me, and explore my work.
-
-## 🚀 Projects
-
-### [Regress Lab](https://regress-lab.vercel.app/)
-- **Icon:** 📈 (fa-chart-line)
-- **Description:** Learn regression by visualizing data interactively. Explore how regression lines fit real datasets and gain intuition for data science concepts.
-
-### [Anchor Chat](https://anchor-chat.vercel.app)
-- **Icon:** 📰 (fa-newspaper)
-- **Description:** Your AI-powered reading companion – chat about any article and get instant summaries. Paste a link, discuss, and understand content faster!
+A clean and modern personal portfolio website showcasing my projects and professional experience.
 
 ## 🌐 Live Demo
-- [alifahsanul.com](https://alifahsanul.com) *(replace with your actual domain if different)*
 
-## 🛠️ Technologies Used
-- HTML5 & CSS3
-- [Font Awesome](https://fontawesome.com/) for icons
+Visit the live website: **[alifahsanul.com](https://alifahsanul.com)**
 
-## 📦 How to Use
-1. Clone or download this repository.
-2. Open `index.html` in your browser to view locally.
-3. To deploy, upload the files to any static hosting service (e.g., Vercel, Netlify, GitHub Pages).
+*Domain registered with [Rumahweb](https://rumahweb.com) and hosted on [Vercel](https://vercel.com)*
 
-## 🤝 Connect with Me
-- [LinkedIn](https://www.linkedin.com/in/alifahsanul)
-- [GitHub](https://github.com/alifahsanul)
+## 🚀 Featured Projects
+
+### [Regress Lab](https://regress-lab.vercel.app/)
+📈 **Interactive Data Visualization Tool**
+- Learn regression concepts through interactive data visualization
+- Explore how regression lines fit real datasets
+- Gain intuitive understanding of data science concepts
+
+### [Anchor Chat](https://anchor-chat.vercel.app)
+📰 **AI-Powered Reading Companion**
+- Chat about any article and get instant summaries
+- Paste article links for instant analysis
+- Understand content faster with AI assistance
+
+## 🛠️ Tech Stack
+
+- **Frontend:** HTML5, CSS3
+- **Icons:** Font Awesome
+- **Deployment:** Static hosting (Vercel/Netlify)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- A modern web browser
+- Basic understanding of HTML/CSS (for customization)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/alifahsanul/alifahsanul_com.git
+   cd alifahsanul_com
+   ```
+
+2. **View locally**
+   - Open `index.html` in your web browser
+   - Or use a local server: `python -m http.server 8000`
+
+3. **Deploy**
+   - Upload files to any static hosting service
+   - Recommended: [Vercel](https://vercel.com), [Netlify](https://netlify.com), or [GitHub Pages](https://pages.github.com)
+
+## 📁 Project Structure
+
+```
+alifahsanul_com/
+├── index.html          # Main HTML file
+├── styles.css          # CSS styles
+├── favicon.png         # Website favicon
+└── README.md           # This file
+```
+
+## 🤝 Connect
+
+- **LinkedIn:** [alifahsanul](https://www.linkedin.com/in/alifahsanul)
+- **GitHub:** [alifahsanul](https://github.com/alifahsanul)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-*Made with ❤️ by Alif Ahsanul* 
+*Built with ❤️ by [Alif Ahsanul](https://alifahsanul.com)* 
