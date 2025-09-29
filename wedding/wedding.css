@@ -359,6 +359,17 @@ body {
         margin-bottom: 20px;
     }
     
+    .main-details-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .rsvp-column,
+    .event-details-column {
+        padding: 15px;
+    }
+    
     .detail-item {
         flex-direction: column;
         text-align: center;
