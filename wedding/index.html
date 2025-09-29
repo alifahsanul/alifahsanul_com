@@ -15,7 +15,13 @@
     <div class="wedding-container">
         <!-- Header -->
         <header class="wedding-header">
-            <h1 class="wedding-title">Wedding Invitation</h1>
+            <div class="language-toggle">
+                <button id="langBtn" onclick="toggleLanguage()">
+                    <span id="flagIcon">🇬🇧</span>
+                    <span id="langText">EN</span>
+                </button>
+            </div>
+            <h1 class="wedding-title" data-en="Wedding Invitation" data-id="Undangan Pernikahan">Wedding Invitation</h1>
             <div class="couple-names">
                 <span class="name">Alif</span>
                 <span class="ampersand">&</span>
@@ -29,13 +35,13 @@
             <section class="main-details-section">
                 <!-- Left Column - RSVP -->
                 <div class="rsvp-column">
-                    <h2>RSVP</h2>
-                    <p>Please let us know if you can join us on our special day!</p>
+                    <h2 data-en="RSVP" data-id="Konfirmasi Kehadiran">RSVP</h2>
+                    <p data-en="Please let us know if you can join us on our special day!" data-id="Mohon konfirmasi kehadiran Anda pada hari istimewa kami!">Please let us know if you can join us on our special day!</p>
                     <a href="#" class="rsvp-btn" target="_blank">
                         <i class="fas fa-heart"></i>
-                        RSVP Here
+                        <span data-en="RSVP Here" data-id="Konfirmasi Di Sini">RSVP Here</span>
                     </a>
-                    <p class="rsvp-note">RSVP by [RSVP Deadline]</p>
+                    <p class="rsvp-note" data-en="RSVP by [RSVP Deadline]" data-id="Konfirmasi sebelum [Tanggal Batas]">RSVP by [RSVP Deadline]</p>
                 </div>
 
                 <!-- Right Column - Event Details -->
@@ -43,7 +49,7 @@
                     <div class="detail-item">
                         <i class="fas fa-calendar-alt"></i>
                         <div>
-                            <h3>Date</h3>
+                            <h3 data-en="Date" data-id="Tanggal">Date</h3>
                             <p>24 Dec 2025</p>
                         </div>
                     </div>
@@ -51,20 +57,20 @@
                     <div class="detail-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h3>Time</h3>
-                            <p>9 am to 11 am</p>
+                            <h3 data-en="Time" data-id="Waktu">Time</h3>
+                            <p data-en="9 am to 11 am" data-id="09.00 - 11.00 WIB">9 am to 11 am</p>
                         </div>
                     </div>
                     
                     <div class="detail-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h3>Venue</h3>
+                            <h3 data-en="Venue" data-id="Tempat">Venue</h3>
                             <p>Villa Srimanganti</p>
                             <p class="venue-address">Jl. Raya Pkp No.34, Klp. Dua Wetan, Kec. Ciracas, Jakarta Timur</p>
                             <a href="https://maps.app.goo.gl/rVnUjLAczsybE9RYA" class="map-link" target="_blank">
                                 <i class="fas fa-map"></i>
-                                View on Google Maps
+                                <span data-en="View on Google Maps" data-id="Lihat di Google Maps">View on Google Maps</span>
                             </a>
                         </div>
                     </div>
@@ -83,27 +89,57 @@
             <!-- Additional info -->
             <section class="additional-info">
                 <div class="info-item">
-                    <h3><i class="fas fa-car"></i> Parking</h3>
-                    <p>Free parking available at the venue</p>
+                    <h3><i class="fas fa-car"></i> <span data-en="Parking" data-id="Parkir">Parking</span></h3>
+                    <p data-en="Free parking available at the venue" data-id="Parkir gratis tersedia di tempat acara">Free parking available at the venue</p>
                 </div>
                 
                 <div class="info-item">
-                    <h3><i class="fas fa-phone"></i> Questions?</h3>
-                    <p>Contact us at [Your Phone Number]</p>
+                    <h3><i class="fas fa-phone"></i> <span data-en="Questions?" data-id="Pertanyaan?">Questions?</span></h3>
+                    <p data-en="Contact us at [Your Phone Number]" data-id="Hubungi kami di [Nomor Telepon Anda]">Contact us at [Your Phone Number]</p>
                 </div>
             </section>
         </main>
 
         <!-- Footer -->
         <footer class="wedding-footer">
-            <p>We can't wait to celebrate with you!</p>
+            <p data-en="We can't wait to celebrate with you!" data-id="Kami tidak sabar merayakan bersama Anda!">We can't wait to celebrate with you!</p>
             <div class="back-link">
                 <a href="../index.html">
                     <i class="fas fa-arrow-left"></i>
-                    Back to alifahsanul.com
+                    <span data-en="Back to alifahsanul.com" data-id="Kembali ke alifahsanul.com">Back to alifahsanul.com</span>
                 </a>
             </div>
         </footer>
     </div>
+
+    <script>
+        let currentLang = 'en';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'id' : 'en';
+            
+            // Update all elements with data attributes
+            const elements = document.querySelectorAll('[data-en][data-id]');
+            elements.forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLang}`);
+            });
+            
+            // Update language button text and flag
+            const langText = document.getElementById('langText');
+            const flagIcon = document.getElementById('flagIcon');
+            
+            if (currentLang === 'en') {
+                langText.textContent = 'EN';
+                flagIcon.textContent = '🇬🇧';
+            } else {
+                langText.textContent = 'ID';
+                flagIcon.textContent = '🇮🇩';
+            }
+            
+            // Update language button title
+            const langBtn = document.getElementById('langBtn');
+            langBtn.title = currentLang === 'en' ? 'Switch to Indonesian' : 'Switch to English';
+        }
+    </script>
 </body>
 </html>
